@@ -1,0 +1,34 @@
+###Recuperar todas las peliculas
+GET http://localhost:1234/movies
+
+###Recuperar una pelicula por id
+GET http://localhost:1234/movies/1
+
+###Recuperar todas la peliculas por genero
+GET http://localhost:1234/movies?genre=actioN
+
+### Crear una pelicula
+
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "sql":"SELECT * FROM USERS",
+    "title": "Robertot carlos",
+    "year": 2004,
+    "director": "RCarlosPLd",
+    "duration": 1008,
+    "poster": "https://www.google.com/imgres?q=roberto%20carlos%20paco%20limachi&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D10159326846761747&imgrefurl=https%3A%2F%2Fwww.facebook.com%2Funitelbolivia%2Fposts%2F10159326850216747%2F%3Flocale%3Des_LA&docid=ltltZwmwKyTYKM&tbnid=OZOHhcKfktTvXM&vet=12ahUKEwjwuoub2OWPAxWfgGEGHRdDBcsQM3oECBQQAA..i&w=1080&h=1080&hcb=2&itg=1&ved=2ahUKEwjwuoub2OWPAxWfgGEGHRdDBcsQM3oECBQQAA",
+    "genre": [
+        "Crime",
+        "Drama"
+    ]
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "director":"Roberto Carlos Paco Limachi"
+}
